@@ -24,3 +24,5 @@ app.use("/products", userProducts);
 // Start server
 app.listen(PORT, console.log(`Server is live on http://localhost:${PORT}`));
  
+
+module.exports = app;
