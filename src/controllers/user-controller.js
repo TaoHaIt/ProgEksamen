@@ -19,12 +19,20 @@ router.delete("/delete", (req, res) => {
 });
 
 // update a userId
-router.get("/update", (req, res) => {
-  const { userId, email, password } = req.params;
-  const userToModifyIndex = db.users.findIndex(user => user.userId === userId);
-  Object.assign(db.users[userToModifyIndex], new userModel(userId, email, password));
-  db.saveFile("../data/users.json", JSON.stringify(db.users));
-  console.log("test");
+
+router.put("/updateuser", (req, res) => {
+  let data = JSON.parse(fs.readFileSync('data/userdata.json'))
+console.log(req.body);
+  for (let i = 0; i < data.length; i++) {
+      if(data[i].email == req.body.email) {
+          data[i].password = req.body.password;
+
+          fs.writeFile('data/userdata.json', JSON.stringify(data, null, 3), err => {
+              if(err) res.send(err);
+              res.send(data);
+          });
+      }
+  }
 });
 
 // user login 

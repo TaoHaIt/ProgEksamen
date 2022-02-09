@@ -40,7 +40,13 @@ document.addEventListener("DOMContentLoaded", (event) => {
       });
     });
   
-  
+    // Opdater kodeord/opdater bruger
+    document.getElementById("updateuser").addEventListener("click", (e) => {
+      location.href="http://localhost:3000/updateuser.html"
+
+      
+
+  })
   
   
     /* delete product
