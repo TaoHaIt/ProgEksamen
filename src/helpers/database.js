@@ -54,10 +54,17 @@ class DB {
     this.saveFile(productToJson, JSON.stringify(this.products));
   }
 // delete product
-  deleteProduct(product) {
-    this.products = this.products.filter((x) => x.userID != product.userID);
-    this.saveFile(productToJson, JSON.stringify(this.products));
-  }
+ 
+    //Databasefunktion til at slette en vare
+   
+    deleteProduct(product) {
+      console.log(this.products)
+      this.products = this.products.filter((x) => x.userID != product.userID);
+      
+      this.saveFile(productToJson, JSON.stringify(this.products));
+    }
+
+  
 
   //Display all products
   allProducts(product) {

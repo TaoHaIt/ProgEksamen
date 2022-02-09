@@ -16,11 +16,16 @@ router.post("/create", (req, res) => {
     });
     
     // delete product
-router.delete("/delete", (req, res) => {
-  const product = new productModel(req.body.product, req.body.price, req.body.userID);
-  db.deleteProduct(product);
-  res.status(200).send(true);
-});
+    router.delete("/deleteproduct", (req, res) => {
+
+      const product = new productModel (req.body.product, req.body.price, req.body.userID);
+    
+      database.deleteProduct(product);
+      res.status(200).send("Product has been removed");
+    
+    });
+
+
 
 // display products
 router.get("/get", (req, res) => {
