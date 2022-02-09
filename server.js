@@ -2,16 +2,16 @@ const express = require("express");
 const app = express();
 
 
-// Er den korrekt i mappen? 
 
-const usercontroller = require("./source/controllers/users_controller");
-const productscontroller = require("./source/controllers/products_controller"); 
+
+const usercontroller = require("./src/controllers/users_controller");
+const productscontroller = require("./src/controllers/products_controller"); 
 
 
 const PORT = process.env.PORT || 3000; 
 
 
-app.use(express.static("./source/client"));
+app.use(express.static("./src/views"));
 app.use(express.json());
 
 

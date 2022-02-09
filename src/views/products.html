@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <script src="products.js"></script>
+  </head>
+  <body>
+    <style>
+      body {background-color: powderblue;}
+h1   {color: blue;}
+p    {color: red;}
+    </style>
+    <h1>Sell a product</h1>
+    <form id="form">
+      <input placeholder="What are you selling?" id="uploadproduct" />
+      <input placeholder="Which price?" id="productPrice" />
+      <input placeholder="UserID - Type in your email" id="userID" />
+      Category: <select name="category" id="category">
+        <option value="Electronics">Electronics</option>
+        <option value="Cars">Cars</option>
+        <option value="Other">Other</option>
+      </select>
+      </BR>
+      Upload image: <input type="file" name="thumbnail"><br/>
+      
+     <!--  <input value="Submit" type="submit" /> --> 
+     <button type="submit" id="uploadbtn">Upload your product!</button>
+    </form>
+
+    <a href="productview.html">View all products here</a>
+    <a href="index.html">Go back to frontpage</a>
+  </body>
+</html>
