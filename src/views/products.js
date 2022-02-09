@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
       console.log("test")
       const product = document.getElementById("uploadproduct").value;
       const price = document.getElementById("productPrice").value;
-      const userID = document.getElementById("userID").value;
+      const userID = document.getElementById("productID").value;
   
       const newProduct = {
         product: product,

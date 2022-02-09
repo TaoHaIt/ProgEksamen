@@ -11,7 +11,7 @@
     <tr>
        <th>productName</th>
        <th>price</th>
-       <th>userID</th>
+       <th>Category</th>
  
    </tr>
     
