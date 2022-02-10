@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", (event) => {
     const user = localStorage.getItem("user");
-    //if (user) {
-      //location.href = "/";
-    //}
+    if (user) {
+      location.href = "/";
+    }
   
     document.getElementById("form").addEventListener("submit", (event) => {
       event.preventDefault();
